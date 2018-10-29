@@ -1,0 +1,141 @@
+:root {
+  --map-body-color: #856831;
+  --about-body-color: #84a6d2;
+  --about-body-font: Alegreya;
+  --map-font: Cormorant Garamond;
+}
+
+
+body {
+  text-rendering: optimizeLegibility;
+  max-height: 100%;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+}
+
+.about-body {
+  font-family: var(--about-body-font);
+  background-color: var(--about-body-color);
+}
+
+.map-body {
+  font-family: var(--map-body-font);
+  background: repeating-linear-gradient(
+  -135deg,
+  white,
+  white 15px,
+  #e8eaed 15px,
+  #e8eaed 30px
+);
+}
+
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: 50px 50px auto auto 50px;
+  grid-template-rows: 50px 70px auto 40px 40px;
+}
+
+.item-a {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+
+.grid-form {
+  font-size: 16px;
+  display: grid;
+  grid-gap: 0.1em 0.4em;
+  grid-template-columns: 60% 1fr;
+  grid-template-rows: repeat(3, 8%) 1fr;
+
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  border: 4px solid grey;
+  border-right-style:none;
+
+}
+
+.form-item-select {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+}
+.form-input {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+}
+.form-item-button {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+
+}
+
+input[class*='form-'], select, button {
+  width:80%;
+  font-size: 1.5em; 
+  justify-self: start;
+  padding: 5px 5px;
+}
+
+.align-right {
+  grid-column-start: 5;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.align-left {
+  display: flex;
+  padding-left:20px;
+  align-items: center;
+  justify-content: center;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.align-left, .align-right, .black-notify {
+  color: white;
+  background: black;
+}
+
+.lower-box {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  background: pink;
+  justify-self: center;
+}
+
+.ham {
+ width: 35px;
+ height: 5px;
+ background-color: black;
+ margin: 9px 9px;
+}
